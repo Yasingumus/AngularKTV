@@ -6,7 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-
+  public kpiConfig = [
+    { name: 'Reistijden', kpi: 'traveltimes' },
+    { name: 'Emissie', kpi: 'emission' }
+  ];
+    
   constructor() { }
 
   ngOnInit(): void {

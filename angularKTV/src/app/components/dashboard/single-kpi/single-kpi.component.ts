@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,19 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./single-kpi.component.css']
 })
 export class SingleKpiComponent implements OnInit {
+
   @Input() name='';
-  constructor() { }
+  @Input() kpi='';
+  private restAPI = 'http://localhost:2000/api/kpis/';
+  public data = '';
+
+  constructor(private http: HttpClient) { }
+
 
   ngOnInit(): void {
+    this.http.get<string>(this.restAPI + this.kpi ).subscribe(data => {
+      this.data = data;
+    });
   }
 
 }
