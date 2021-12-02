@@ -1,26 +1,37 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
+import { TraveltimeJson } from './traveltime-json';
 
 @Component({
   selector: 'app-single-kpi',
   templateUrl: './single-kpi.component.html',
   styleUrls: ['./single-kpi.component.css']
 })
+
 export class SingleKpiComponent implements OnInit {
 
-  @Input() name='';
+  @Input() name= 'string' ;
   @Input() kpi='';
   private restAPI = 'http://localhost:2000/api/kpis/';
-  public data = '';
+  public data:TraveltimeJson[] = [];
+  public traveltimes: number[]=[];
+  public delays: number[]=[];
+  public categories: string[]=[];
   public options: any;
+  
   
   constructor(private http: HttpClient) { }
 
 
   ngOnInit(): void {
-    this.http.get<string>(this.restAPI + this.kpi ).subscribe(data => {
+    this.http.get<TraveltimeJson[]>(this.restAPI + this.kpi ).subscribe(data => {
+      data.forEach(element => {
+        this.traveltimes.push(element.traveltime);
+        this.delays.push(element.delay);
+        this.categories.push(element.name);
+      });
       this.data = data;
-      console.log(this.data);
+      console.log(this.traveltimes);
     });
     this.options = {
       title: {
@@ -45,7 +56,7 @@ export class SingleKpiComponent implements OnInit {
       },
       yAxis: {
         type: 'category',
-        data: ['Gemiddelde reistijd', 'Huidig moment', 'Prognose 15 min']
+        data: this.categories
       },
       series: [
         {
@@ -58,7 +69,8 @@ export class SingleKpiComponent implements OnInit {
           emphasis: {
             focus: 'series'
           },
-          data: [18, 23, 19]
+          data: this.traveltimes
+
         },
         {
           name: 'Vertraging',
@@ -70,7 +82,7 @@ export class SingleKpiComponent implements OnInit {
           emphasis: {
             focus: 'series'
           },
-          data: [21, 24, 20]
+          data: this.delays
         }
       ]
     };

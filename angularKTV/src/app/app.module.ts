@@ -8,6 +8,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { KpiDataComponent } from './components/dashboard/kpi-data/kpi-data.component';
 import { SingleKpiComponent } from './components/dashboard/single-kpi/single-kpi.component';
 import { NgxEchartsModule } from 'ngx-echarts';
+import { EmissionKpiComponent } from './components/dashboard/emission-kpi/emission-kpi.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { NgxEchartsModule } from 'ngx-echarts';
     AppComponent,
     SingleKpiComponent,
     KpiDataComponent,
-    DashboardComponent
+    DashboardComponent,
+    EmissionKpiComponent
   ],
   imports: [
     BrowserModule,
