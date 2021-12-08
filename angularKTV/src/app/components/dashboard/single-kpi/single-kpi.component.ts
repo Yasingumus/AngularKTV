@@ -69,8 +69,7 @@ export class SingleKpiComponent implements OnInit {
           emphasis: {
             focus: 'series'
           },
-          data: this.traveltimes,
-
+          data: this.traveltimes     
         },
         {
           name: 'Vertraging',
@@ -87,5 +86,6 @@ export class SingleKpiComponent implements OnInit {
       ]
     };
   }
-
 }
+
+
