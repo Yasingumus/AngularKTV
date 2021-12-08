@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { percentagesJson } from './percentages-json';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-percentages',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PercentagesComponent implements OnInit {
 
-  constructor() { }
+  @Input() name = 'string';
+  @Input() kpi = '';
+  private restAPI = 'http://localhost:2000/api/kpis/';
+  public data: percentagesJson[] = [];
+  public categories: string[] = [];
+  public options: any;
+
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
-  }
+    this.http.get<percentagesJson[]>(this.restAPI + this.kpi).subscribe(data => {
 
+      this.data = data;
+      console.log(this.data);
+    });
+  }
 }
