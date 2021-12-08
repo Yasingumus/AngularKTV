@@ -8,3 +8,7 @@
     border-width: 2px;
     border-color: cornflowerblue;
 }
+
+table, th, td {
+    border:1px solid black;
+  }

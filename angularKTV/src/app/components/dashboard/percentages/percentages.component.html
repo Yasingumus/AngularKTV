@@ -1,28 +1,42 @@
 <div class="container">
-    <table>
+    <table style="width:100%">
         <tr>
-            <th>
-                Kop1
-            </th>
-            <th>
-                Kop2
-            </th>
-            <th>
-                Kop1
-            </th>
-            <th>
-                Kop1
-            </th>
-            <th>
-                Kop1
-            </th>
-            <th>
-                Kop1
-            </th>
-            <th>
-                Kop1
-            </th>
+            <th>Categorisering</th>
+          <th>{{data[0].route}}</th>
+          <th>{{data[1].route}}</th>
+          <th>{{data[2].route}}</th>
+          <th>{{data[3].route}}</th>
+          <th>{{data[4].route}}</th>
+          <th>{{data[5].route}}</th>
         </tr>
+        <tr>
+            <td>minder dan 5 minuten</td>
+          <td>{{data[0].percentage[0]}}</td>
+          <td>{{data[1].percentage[0]}}</td>
+          <td>{{data[2].percentage[0]}}</td>
+          <td>{{data[3].percentage[0]}}</td>
+          <td>{{data[4].percentage[0]}}</td>
+          <td>{{data[5].percentage[0]}}</td>
+        </tr>
+        <tr>
+            <td>5-15 minuten</td>
+          <td>{{data[0].percentage[1]}}</td>
+          <td>{{data[1].percentage[1]}}</td>
+          <td>{{data[2].percentage[1]}}</td>
+          <td>{{data[3].percentage[1]}}</td>
+          <td>{{data[4].percentage[1]}}</td>
+          <td>{{data[5].percentage[1]}}</td>
+        </tr>
+        <tr>
+            <td>15 minuten of meer</td>
+            <td>{{data[0].percentage[2]}}</td>
+            <td>{{data[1].percentage[2]}}</td>
+            <td>{{data[2].percentage[2]}}</td>
+            <td>{{data[3].percentage[2]}}</td>
+            <td>{{data[4].percentage[2]}}</td>
+            <td>{{data[5].percentage[2]}}</td>
+          </tr>
+      </table>
         
-    </table>
+    
 </div>
