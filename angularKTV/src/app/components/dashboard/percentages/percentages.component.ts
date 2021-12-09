@@ -13,14 +13,12 @@ export class PercentagesComponent implements OnInit {
   @Input() kpi = '';
   private restAPI = 'http://localhost:2000/api/kpis/';
   public data: percentagesJson[] = [];
-  public categories: string[] = [];
   public options: any;
 
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
     this.http.get<percentagesJson[]>(this.restAPI + this.kpi).subscribe(data => {
-
       this.data = data;
       console.log(this.data);
     });
