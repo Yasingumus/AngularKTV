@@ -4,12 +4,12 @@ flex-direction: row;
 align-items: center;
 justify-content: space-around;
 font-family: Trebuchet MS,Roboto,Helvetica Neue,sans-serif;
-
+position: relative;
 }
 
-.bg-image{
+/* .bg-image{
     background-image: url("./bg_map.PNG");
     height: 600px;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+    background-size:cover;
+
+} */
