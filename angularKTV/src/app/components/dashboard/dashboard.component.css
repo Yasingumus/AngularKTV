@@ -7,9 +7,9 @@ font-family: Trebuchet MS,Roboto,Helvetica Neue,sans-serif;
 position: relative;
 }
 
-/* .bg-image{
+.bg-image{
     background-image: url("./bg_map.PNG");
     height: 600px;
     background-size:cover;
 
-} */
+}

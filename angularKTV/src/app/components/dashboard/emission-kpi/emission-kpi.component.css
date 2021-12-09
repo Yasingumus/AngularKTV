@@ -1,10 +1,13 @@
 .container{
     border:solid 1px black;
     width: auto;
-    margin: 0 75px;
     text-align: center;
-    background-color: #dbe5f2;
+    background-color: whitesmoke;
     border-radius: 10px;
     border-width: 2px;
-    border-color: cornflowerblue;
+    border-color: white;
+    min-width: 300px;
+    font-weight: bold;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+    margin-right: 10px;
 }
