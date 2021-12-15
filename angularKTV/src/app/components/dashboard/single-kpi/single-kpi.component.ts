@@ -31,7 +31,7 @@ export class SingleKpiComponent implements OnInit {
         this.categories.push(element.name);
       });
       this.data = data;
-      console.log(this.traveltimes);
+      //console.log(this.traveltimes);
     });
     this.options = {
       title: {

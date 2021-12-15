@@ -27,7 +27,7 @@ export class EmissionKpiComponent implements OnInit {
         this.categories.push(element.name);
       });
       this.data = data;
-      console.log(this.emission);
+      //console.log(this.emission);
     });
     this.options = {
       series: [

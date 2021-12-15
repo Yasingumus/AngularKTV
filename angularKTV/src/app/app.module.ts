@@ -5,7 +5,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { KpiDataComponent } from './components/dashboard/kpi-data/kpi-data.component';
 import { SingleKpiComponent } from './components/dashboard/single-kpi/single-kpi.component';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { EmissionKpiComponent } from './components/dashboard/emission-kpi/emission-kpi.component';
@@ -18,7 +17,6 @@ import { NgxSliderModule } from '@angular-slider/ngx-slider';
   declarations: [
     AppComponent,
     SingleKpiComponent,
-    KpiDataComponent,
     DashboardComponent,
     EmissionKpiComponent,
     PercentagesComponent,
