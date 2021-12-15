@@ -1,0 +1,13 @@
+.slider {
+    position: fixed; 
+    left: 25%;
+    width: 50%;
+}
+
+#SliderTitel {
+    position: fixed; 
+    left: 17%;
+    top: 4%;
+    width: 50%;
+    font-size: larger;
+}

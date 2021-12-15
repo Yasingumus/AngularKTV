@@ -10,7 +10,9 @@ import { SingleKpiComponent } from './components/dashboard/single-kpi/single-kpi
 import { NgxEchartsModule } from 'ngx-echarts';
 import { EmissionKpiComponent } from './components/dashboard/emission-kpi/emission-kpi.component';
 import { PercentagesComponent } from './components/dashboard/percentages/percentages.component';
-
+import { SliderOverviewComponent } from './components/dashboard/slider-overview/slider-overview.component';
+import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxSliderModule } from '@angular-slider/ngx-slider';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { PercentagesComponent } from './components/dashboard/percentages/percent
     KpiDataComponent,
     DashboardComponent,
     EmissionKpiComponent,
-    PercentagesComponent
+    PercentagesComponent,
+    SliderOverviewComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,10 @@ import { PercentagesComponent } from './components/dashboard/percentages/percent
     NgxEchartsModule,
     NgxEchartsModule.forRoot({
       echarts: () => import('echarts')
-    })
+    }),
+    NoopAnimationsModule,
+    BrowserAnimationsModule,
+    NgxSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

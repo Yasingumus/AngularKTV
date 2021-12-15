@@ -1,6 +1,4 @@
 export interface percentagesJson {	
-  name: string,
-    route: number,	
-    category:number[],	
-    percentage:number[]
+    route: number,		
+    percentage:number
   }
