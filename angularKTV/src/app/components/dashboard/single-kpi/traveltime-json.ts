@@ -1,6 +1,12 @@
 export interface TraveltimeJson {
-    id:number;
+    time: number;
+    data: TraveltimeData[];
+}
+
+export interface TraveltimeData {
     name: string;
     traveltime: number;
-    delay: number;
+    estimation: number;
 }
+
+

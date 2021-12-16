@@ -20,7 +20,6 @@ export class PercentagesComponent implements OnInit {
   ngOnInit(): void {
     this.http.get<percentagesJson[]>(this.restAPI + this.kpi).subscribe(data => {
       this.data = data;
-      console.log(this.data);
     });
   }
 }

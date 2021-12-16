@@ -1,2 +1,2 @@
 <p id="SliderTitel">Tijdselectie:</p>
-<ngx-slider (input)="onInputChange($event)" class="slider" [(value)]="value" [options]="options"></ngx-slider>
+<ngx-slider (valueChange)="onSlideChange($event)" class="slider" [options]="options"></ngx-slider>

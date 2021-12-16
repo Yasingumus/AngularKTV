@@ -11,6 +11,7 @@ import { EmissionKpiComponent } from './components/dashboard/emission-kpi/emissi
 import { PercentagesComponent } from './components/dashboard/percentages/percentages.component';
 import { SliderOverviewComponent } from './components/dashboard/slider-overview/slider-overview.component';
 import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
+
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
 
 @NgModule({

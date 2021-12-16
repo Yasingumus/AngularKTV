@@ -1,7 +1,7 @@
-<app-slider-overview></app-slider-overview>
+<app-slider-overview (sliderChangeEvent)="changeTime($event)"></app-slider-overview>
 <br><br>
 <div class="container">
-    <app-single-kpi name="Reistijden" kpi="traveltimes" style="width: 40%;"></app-single-kpi>
+    <app-single-kpi name="Reistijden" [options]="traveltimeOptions" style="width: 40%;"></app-single-kpi>
     <app-percentages name="Percentages" kpi="percentages"></app-percentages>
-    <app-emission-kpi name="Emission" kpi="emission" style="width: 40%;"></app-emission-kpi>
+    <app-emission-kpi name="Emission" [optionsTotal]="emisionOptionsTotal"  [optionsEstimated]="emisionOptionsEstimated" style="width: 40%;"></app-emission-kpi>
 </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Options } from '@angular-slider/ngx-slider';
 
 @Component({
@@ -7,8 +7,9 @@ import { Options } from '@angular-slider/ngx-slider';
   styleUrls: ['./slider-overview.component.css']
 })
 
-export class SliderOverviewComponent implements OnInit {
-  value: number = 123;
+export class SliderOverviewComponent {
+
+  @Output() sliderChangeEvent = new EventEmitter<number>();
 
   options: Options = {
     showTicksValues: true,
@@ -19,13 +20,8 @@ export class SliderOverviewComponent implements OnInit {
       { value: 10 }]
   }
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-  onInputChange(event: any): void {
-    console.log("This is emitted as the thumb slides");
-    console.log(event.value);
+  onSlideChange(time: number): void {
+    this.sliderChangeEvent.emit(time);
   }
 
 }
