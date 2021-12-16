@@ -2,6 +2,6 @@
 <br><br>
 <div class="container">
     <app-single-kpi name="Reistijden" [options]="traveltimeOptions" style="width: 40%;"></app-single-kpi>
-    <app-percentages name="Percentages" kpi="percentages"></app-percentages>
+    <app-percentages name="Percentages" [data]="percentagesData"></app-percentages>
     <app-emission-kpi name="Emission" [optionsTotal]="emisionOptionsTotal"  [optionsEstimated]="emisionOptionsEstimated" style="width: 40%;"></app-emission-kpi>
 </div>

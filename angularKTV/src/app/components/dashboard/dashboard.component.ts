@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { EmissionData, EmissionJson } from './emission-kpi/emission-data';
+import { PercentagesData, PercentagesJson } from './percentages/percentages-json';
 import { TraveltimeData, TraveltimeJson } from './single-kpi/traveltime-json';
 
 @Component({
@@ -22,11 +23,15 @@ export class DashboardComponent implements OnInit {
   public traveltimeJson: TraveltimeJson[] = [];
   public traveltimeData?: TraveltimeData[] = [];
 
+  public percentagesJson: PercentagesJson[] = [];
+  public percentagesData?: PercentagesData[] = [];
+
   constructor(private http: HttpClient) { }
 
   changeTime(time: number) {
     this.emissionData = this.emissionJson.find(j => j.time === time)?.data;
     this.traveltimeData = this.traveltimeJson.find(j => j.time === time)?.data;
+    this.percentagesData = this.percentagesJson.find(j => j.time === time)?.data;
     this.constructEmissionOptions();
     this.constructTraveltimeOptions();
 
@@ -46,7 +51,11 @@ export class DashboardComponent implements OnInit {
     });
   }
   private constructPercentagesData() {
-
+    this.http.get<PercentagesJson[]>(`${this.restAPI}/percentages`).subscribe(json => {
+      this.percentagesJson = json;
+      this.percentagesData = this.percentagesJson.find(j => j.time === this.time)?.data;
+      console.log(this.percentagesData);
+    });
   }
 
 
@@ -122,7 +131,7 @@ export class DashboardComponent implements OnInit {
   
 
   private constructPercentageOptions() {
-
+  
 }
 
   private constructEmissionOptions() {

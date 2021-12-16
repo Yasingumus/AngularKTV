@@ -1,25 +1,18 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { percentagesJson } from './percentages-json';
-import { HttpClient } from '@angular/common/http';
+import { PercentagesData } from './percentages-json';
 
 @Component({
   selector: 'app-percentages',
   templateUrl: './percentages.component.html',
   styleUrls: ['./percentages.component.css']
 })
-export class PercentagesComponent implements OnInit {
 
-  @Input() name = 'string';
-  @Input() kpi = '';
-  private restAPI = 'http://localhost:2000/api/kpis/';
-  public data: percentagesJson[] = [];
-  public options: any;
+export class PercentagesComponent {
 
-  constructor(private http: HttpClient) { }
+  @Input() name = '';
+  @Input() data: any = [];
 
-  ngOnInit(): void {
-    this.http.get<percentagesJson[]>(this.restAPI + this.kpi).subscribe(data => {
-      this.data = data;
-    });
-  }
+  
+
+  constructor() { }
 }

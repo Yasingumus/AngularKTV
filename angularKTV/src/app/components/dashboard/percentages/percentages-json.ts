@@ -1,5 +1,11 @@
-export interface percentagesJson {
-    time: number,	
-    route: number,		
-    percentage:number,
-  }
+export interface PercentagesJson {
+  time: number;
+  data: PercentagesData[];
+}
+
+export interface PercentagesData {
+  route: number;
+  difference: number;
+  percentage: number;
+}
+
