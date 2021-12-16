@@ -1,13 +1,15 @@
 .slider {
-    position: fixed; 
+    position: absolute; 
     left: 25%;
     width: 50%;
+    padding-bottom: 200px;
 }
 
 #SliderTitel {
-    position: fixed; 
+    position: absolute; 
     left: 17%;
     top: 4%;
     width: 50%;
     font-size: larger;
+    padding-bottom: 20px;
 }

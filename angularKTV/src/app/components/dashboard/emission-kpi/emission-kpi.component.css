@@ -1,14 +1,22 @@
 .container{
     border:solid 1px black;
-    width: 30%;
     margin: 10px 10px;
-    text-align: center;
     background-color: whitesmoke;
     border-radius: 10px;
     border-width: 2px;
     border-color: white;
     min-width: 300px;
     font-weight: bold;
-    box-shadow: 0 0 20px rgba(0,0,0,0.15);
-    margin-right: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);    
 }
+.estimated{
+align-items: center;
+align-content: center;
+
+}
+
+.total{
+    align-items: center;
+    align-content: center;
+    
+    }
