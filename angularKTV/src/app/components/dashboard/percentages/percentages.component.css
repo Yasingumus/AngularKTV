@@ -1,18 +1,18 @@
-.container {
+/* .container {
     width: auto;
-    margin: 10px 10px;
     background-color: white;
     border-radius: 5px 5px 3px 3px;
-}
+} */
 #titeltabel {
     text-align: center;
+    font-family: Trebuchet MS,Roboto,Helvetica Neue,sans-serif;
 }
 
 .content-table {
     border-collapse: collapse;
-    margin: 25px 20px;
+    margin: 5px 5px;
     font-size: 0, 9em;
-    min-width: 200px;
+    min-width: 50px;
     border-radius: 5px 5px 3px 3px;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0,0,0,0.15);

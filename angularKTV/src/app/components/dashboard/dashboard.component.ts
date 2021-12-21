@@ -100,7 +100,7 @@ export class DashboardComponent implements OnInit {
       },
       series: [
         {
-          name: 'Normale reistijd',
+          name: 'Reistijd',
           type: 'bar',
           label: {
             show: false,
@@ -112,7 +112,7 @@ export class DashboardComponent implements OnInit {
           data: this.traveltimeData?.map(t => t.traveltime)
         },
         {
-          name: 'Vertraging',
+          name: 'Reistijd prognose',
           type: 'bar',
           label: {
             show: false,
@@ -139,14 +139,14 @@ export class DashboardComponent implements OnInit {
     series: [
       {
         type: 'gauge',
-        min: 100,
-        max: 300,
+        min: 0,
+        max: 400,
         axisLine: {          
           lineStyle: {
             width: 29,
             color: [
-              [0.5, '#58d68d'],
-              [0.7, '#F39C12'],
+              [0.6, '#58d68d'],
+              [0.8, '#F39C12'],
               [1, '#fd666d']
             ]
           }
@@ -174,7 +174,7 @@ export class DashboardComponent implements OnInit {
         },
         axisLabel: {
           color: 'auto',
-          distance: 30,
+          distance: 40,
           fontSize: 15
         },
         detail: {
@@ -192,14 +192,14 @@ export class DashboardComponent implements OnInit {
     series: [
       {
         type: 'gauge',
-        min: 100,
-        max: 300,
+        min: 0,
+        max: 400,
         axisLine: {
           lineStyle: {
             width: 29,
             color: [
-              [0.5, '#58d68d'],
-              [0.7, '#F39C12'],
+              [0.6, '#58d68d'],
+              [0.8, '#F39C12'],
               [1, '#fd666d']
             ]
           }
@@ -227,7 +227,7 @@ export class DashboardComponent implements OnInit {
         },
         axisLabel: {
           color: 'auto',
-          distance: 30,
+          distance: 40,
           fontSize: 15
         },
         detail: {

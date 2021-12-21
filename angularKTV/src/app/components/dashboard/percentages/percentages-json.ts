@@ -4,7 +4,7 @@ export interface PercentagesJson {
 }
 
 export interface PercentagesData {
-  route: number;
+  route: string;
   difference: number;
   percentage: number;
 }
