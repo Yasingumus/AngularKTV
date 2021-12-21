@@ -103,7 +103,7 @@ export class DashboardComponent implements OnInit {
           name: 'Normale reistijd',
           type: 'bar',
           label: {
-            show: true,
+            show: false,
             position: 'right'
           },
           emphasis: {
@@ -115,7 +115,7 @@ export class DashboardComponent implements OnInit {
           name: 'Vertraging',
           type: 'bar',
           label: {
-            show: true,
+            show: false,
             position: 'right'
           },
           emphasis: {
@@ -139,7 +139,9 @@ export class DashboardComponent implements OnInit {
     series: [
       {
         type: 'gauge',
-        axisLine: {
+        min: 100,
+        max: 300,
+        axisLine: {          
           lineStyle: {
             width: 29,
             color: [
@@ -172,14 +174,14 @@ export class DashboardComponent implements OnInit {
         },
         axisLabel: {
           color: 'auto',
-          distance: 40,
-          fontSize: 20
+          distance: 30,
+          fontSize: 15
         },
         detail: {
           valueAnimation: true,
           formatter: '{value} kg C02',
           color: 'auto',
-          fontSize: 20
+          fontSize: 15
         },
         data: [{ value: this.emissionData?.total }]
       }
@@ -190,6 +192,8 @@ export class DashboardComponent implements OnInit {
     series: [
       {
         type: 'gauge',
+        min: 100,
+        max: 300,
         axisLine: {
           lineStyle: {
             width: 29,
@@ -223,14 +227,14 @@ export class DashboardComponent implements OnInit {
         },
         axisLabel: {
           color: 'auto',
-          distance: 40,
-          fontSize: 20
+          distance: 30,
+          fontSize: 15
         },
         detail: {
           valueAnimation: true,
           formatter: '{value} kg C02',
           color: 'auto',
-          fontSize: 20
+          fontSize: 15
         },
         data: [{ value: this.emissionData?.estimated }]
       }
