@@ -12,20 +12,18 @@ import { TraveltimeData, TraveltimeJson } from './single-kpi/traveltime-json';
 export class DashboardComponent implements OnInit {
 
   private restAPI = 'http://localhost:2000/api/kpis';
-
+  // Hier staat de path/url gedefineerd //
   public emisionOptionsTotal: any;
   public emisionOptionsEstimated: any;
   public time = 7;
   public emissionJson: EmissionJson[] = [];
   public emissionData?: EmissionData;
   public traveltimeOptions: any;
-
   public traveltimeJson: TraveltimeJson[] = [];
   public traveltimeData?: TraveltimeData[] = [];
-
   public percentagesJson: PercentagesJson[] = [];
   public percentagesData?: PercentagesData[] = [];
-
+  // alle verschillende arrays //
   constructor(private http: HttpClient) { }
 
   changeTime(time: number) {
@@ -34,7 +32,7 @@ export class DashboardComponent implements OnInit {
     this.percentagesData = this.percentagesJson.find(j => j.time === time)?.data;
     this.constructEmissionOptions();
     this.constructTraveltimeOptions();
-
+    // Dit zorgt ervoor dat de Json gebruikt wordt om de arrays te vullen
   }
 
   ngOnInit(): void {
@@ -128,118 +126,118 @@ export class DashboardComponent implements OnInit {
   }
 
 
-  
+
 
   private constructPercentageOptions() {
-  
-}
+
+  }
 
   private constructEmissionOptions() {
-  this.emisionOptionsTotal = {
-    series: [
-      {
-        type: 'gauge',
-        min: 0,
-        max: 400,
-        axisLine: {          
-          lineStyle: {
-            width: 29,
-            color: [
-              [0.6, '#58d68d'],
-              [0.8, '#F39C12'],
-              [1, '#fd666d']
-            ]
-          }
-        },
-        pointer: {
-          itemStyle: {
-            color: 'auto'
-          }
-        },
-        axisTick: {
-          distance: -30,
-          length: 8,
-          lineStyle: {
-            color: '#fff',
-            width: 2
-          }
-        },
-        splitLine: {
-          distance: -30,
-          length: -40,
-          lineStyle: {
-            color: '#fff',
-            width: 4
-          }
-        },
-        axisLabel: {
-          color: 'auto',
-          distance: 40,
-          fontSize: 15
-        },
-        detail: {
-          valueAnimation: true,
-          formatter: '{value} kg C02',
-          color: 'auto',
-          fontSize: 15
-        },
-        data: [{ value: this.emissionData?.total }]
-      }
-    ]
-  };
+    this.emisionOptionsTotal = {
+      series: [
+        {
+          type: 'gauge',
+          min: 0,
+          max: 400,
+          axisLine: {
+            lineStyle: {
+              width: 29,
+              color: [
+                [0.6, '#58d68d'],
+                [0.8, '#F39C12'],
+                [1, '#fd666d']
+              ]
+            }
+          },
+          pointer: {
+            itemStyle: {
+              color: 'auto'
+            }
+          },
+          axisTick: {
+            distance: -30,
+            length: 8,
+            lineStyle: {
+              color: '#fff',
+              width: 2
+            }
+          },
+          splitLine: {
+            distance: -30,
+            length: -40,
+            lineStyle: {
+              color: '#fff',
+              width: 4
+            }
+          },
+          axisLabel: {
+            color: 'auto',
+            distance: 40,
+            fontSize: 15
+          },
+          detail: {
+            valueAnimation: true,
+            formatter: '{value} kg C02',
+            color: 'auto',
+            fontSize: 15
+          },
+          data: [{ value: this.emissionData?.total }]
+        }
+      ]
+    };
 
-  this.emisionOptionsEstimated = {
-    series: [
-      {
-        type: 'gauge',
-        min: 0,
-        max: 400,
-        axisLine: {
-          lineStyle: {
-            width: 29,
-            color: [
-              [0.6, '#58d68d'],
-              [0.8, '#F39C12'],
-              [1, '#fd666d']
-            ]
-          }
-        },
-        pointer: {
-          itemStyle: {
-            color: 'auto'
-          }
-        },
-        axisTick: {
-          distance: -30,
-          length: 8,
-          lineStyle: {
-            color: '#fff',
-            width: 2
-          }
-        },
-        splitLine: {
-          distance: -30,
-          length: -40,
-          lineStyle: {
-            color: '#fff',
-            width: 4
-          }
-        },
-        axisLabel: {
-          color: 'auto',
-          distance: 40,
-          fontSize: 15
-        },
-        detail: {
-          valueAnimation: true,
-          formatter: '{value} kg C02',
-          color: 'auto',
-          fontSize: 15
-        },
-        data: [{ value: this.emissionData?.estimated }]
-      }
-    ]
-  };
+    this.emisionOptionsEstimated = {
+      series: [
+        {
+          type: 'gauge',
+          min: 0,
+          max: 400,
+          axisLine: {
+            lineStyle: {
+              width: 29,
+              color: [
+                [0.6, '#58d68d'],
+                [0.8, '#F39C12'],
+                [1, '#fd666d']
+              ]
+            }
+          },
+          pointer: {
+            itemStyle: {
+              color: 'auto'
+            }
+          },
+          axisTick: {
+            distance: -30,
+            length: 8,
+            lineStyle: {
+              color: '#fff',
+              width: 2
+            }
+          },
+          splitLine: {
+            distance: -30,
+            length: -40,
+            lineStyle: {
+              color: '#fff',
+              width: 4
+            }
+          },
+          axisLabel: {
+            color: 'auto',
+            distance: 40,
+            fontSize: 15
+          },
+          detail: {
+            valueAnimation: true,
+            formatter: '{value} kg C02',
+            color: 'auto',
+            fontSize: 15
+          },
+          data: [{ value: this.emissionData?.estimated }]
+        }
+      ]
+    };
 
-}
+  }
 }
