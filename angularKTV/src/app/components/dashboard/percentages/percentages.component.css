@@ -1,8 +1,17 @@
-/* .container {
-    width: auto;
-    background-color: white;
-    border-radius: 5px 5px 3px 3px;
-} */
+.container {
+    border:solid 1px black;
+    width: 90%;
+    margin: 50px 20px;
+    text-align: center;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: white;
+    min-width: 250px;
+    font-weight: bold;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+    min-height: 450px;
+}
 
 /* opmaak voor de titel van de tabel */
 #titeltabel {
