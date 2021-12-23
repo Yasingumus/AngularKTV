@@ -1,3 +1,4 @@
+    /* De opmaak voor de gehele container */
 .container{
     border:solid 1px black;
     margin: 10px 10px;
@@ -10,12 +11,13 @@
     box-shadow: 0 0 20px rgba(0,0,0,0.15); 
     text-align: center;   
 }
+/* De opmaak voor de estimated CO2 uitstoot */
 .estimated{
 align-items: center;
 align-content: center;
 
 }
-
+/* De opmaak voor de total C02 uitstoot */
 .total{
     align-items: center;
     align-content: center;
