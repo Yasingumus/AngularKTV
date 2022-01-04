@@ -12,7 +12,7 @@ npm install -g @angular/cli
 
  
 
-Als je alle bovenstaande stappen hebt doorlopen dan kan je de terminal open en npm start typen vervolgens gaat de applicatie op localhost:4200 
+Als je alle bovenstaande stappen hebt doorlopen dan kan je de terminal openen en npm start typen vervolgens gaat de applicatie op localhost:4200 
 (als het goed is geeft de terminal aan op welke poort het draait) draaien en kan je beginnen met programmeren. Veel plezier en succes.   
 
 
