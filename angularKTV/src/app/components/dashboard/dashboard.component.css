@@ -1,9 +1,50 @@
-.container{
-display:flex;
-flex-direction: row;
-align-items: center;
-justify-content: space-around;
-font-family: Trebuchet MS,Roboto,Helvetica Neue,sans-serif;
-position: relative;
+.container {
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.containerLeft{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: Trebuchet MS,Roboto,Helvetica Neue,sans-serif;
+    position: relative;
+
+    border:solid 1px black;
+    width: 48%;
+    max-height: 450px;
+    text-align: center;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: white;
+    font-weight: bold;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+}
+
+.containerRight{
+    display:flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-family: Trebuchet MS,Roboto,Helvetica Neue,sans-serif;   
+    
+    border:solid 1px black;
+    width: 48%;
+    max-height: 450px;
+    margin: 25px 10px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15); 
+    text-align: center;
+}
+
+#Emdif {
+    border: solid 1px tomato;
+    border-radius: 10px;
 }
 

@@ -6,5 +6,6 @@ export interface EmissionJson {
 export interface EmissionData {
     total: number;
     estimated: number;
+    difference: number;
 }
 

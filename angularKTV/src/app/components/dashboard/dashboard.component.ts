@@ -15,6 +15,7 @@ export class DashboardComponent implements OnInit {
   // Hier staat de path/url gedefineerd //
   public emisionOptionsTotal: any;
   public emisionOptionsEstimated: any;
+  public emissionDifference: any;
   public time = 7;
   public emissionJson: EmissionJson[] = [];
   public emissionData?: EmissionData;
@@ -32,6 +33,7 @@ export class DashboardComponent implements OnInit {
     this.percentagesData = this.percentagesJson.find(j => j.time === time)?.data;
     this.constructEmissionOptions();
     this.constructTraveltimeOptions();
+    this.constructDifferenceOptions();
     // Dit zorgt ervoor dat de Json gebruikt wordt om de arrays te vullen
   }
 
@@ -40,6 +42,7 @@ export class DashboardComponent implements OnInit {
     this.constructTraveltimeData();
     this.constructPercentagesData();
   }
+
 
   private constructTraveltimeData() {
     this.http.get<TraveltimeJson[]>(`${this.restAPI}/traveltimes`).subscribe(json => {
@@ -63,6 +66,7 @@ export class DashboardComponent implements OnInit {
       this.emissionJson = json;
       this.emissionData = this.emissionJson.find(j => j.time === this.time)?.data
       this.constructEmissionOptions();
+      this.constructDifferenceOptions();
     });
 
     // Traveltimedata REST call
@@ -98,7 +102,7 @@ export class DashboardComponent implements OnInit {
       },
       series: [
         {
-          name: 'Reistijd',
+          name: 'Reistijd min & sec',
           type: 'bar',
           label: {
             show: false,
@@ -110,7 +114,7 @@ export class DashboardComponent implements OnInit {
           data: this.traveltimeData?.map(t => t.traveltime)
         },
         {
-          name: 'Reistijd prognose',
+          name: 'Reistijd prognose min & sec (10 min.)',
           type: 'bar',
           label: {
             show: false,
@@ -126,11 +130,10 @@ export class DashboardComponent implements OnInit {
   }
 
 
-
-
-  private constructPercentageOptions() {
-
+  public constructDifferenceOptions() {
+    this.emissionDifference = this.emissionData?.difference
   }
+  
 
   private constructEmissionOptions() {
     this.emisionOptionsTotal = {

@@ -10,9 +10,11 @@ import { Component, Input, OnInit } from '@angular/core';
 export class EmissionKpiComponent {
   // hier wordt het type data gedefineerd
   @Input() name = '';
+  @Input() difference = '';
   @Input() optionsTotal: any;
   @Input() optionsEstimated: any;
-
+ 
   constructor() { }
-
+  
 }
+

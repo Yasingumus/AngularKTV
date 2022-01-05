@@ -1,4 +1,4 @@
-.container {
+/* .container {
     border:solid 1px black;
     width: 90%;
     margin: 50px 20px;
@@ -11,7 +11,7 @@
     font-weight: bold;
     box-shadow: 0 0 20px rgba(0,0,0,0.15);
     min-height: 450px;
-}
+} */
 
 /* opmaak voor de titel van de tabel */
 #titeltabel {
@@ -30,6 +30,7 @@
     position: relative;
 }
 
+
 /* opmaak voor de koppen van de tabel */
 .content-table th {
 
@@ -42,6 +43,8 @@
 .content-table td {
     padding: 12px 15px;
     text-align: center;
+    padding-bottom: 20px;
+    max-width: 50px;
 }
 /* opmaak voor de body */
 .content-table tbody tr {

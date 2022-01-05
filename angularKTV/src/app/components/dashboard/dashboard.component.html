@@ -1,10 +1,18 @@
 <app-slider-overview (sliderChangeEvent)="changeTime($event)"></app-slider-overview>
 <br><br>
 <div class="container">
-    <app-single-kpi name="Reistijden" [options]="traveltimeOptions" style="width: 30%;"></app-single-kpi>
-    <app-percentages name="Percentages" [data]="percentagesData"></app-percentages>
-    <app-emission-kpi name="Totale uitstoot" [optionsTotal]="emisionOptionsTotal" style="width: 30%;"></app-emission-kpi>
-    <app-emission-kpi name="Totale uitstoot prognose"  [optionsEstimated]="emisionOptionsEstimated" style="width: 30%;"></app-emission-kpi>
+    <div class="containerLeft">
+        <app-single-kpi name="Reistijden in grafiek" [options]="traveltimeOptions" style="width: 50%;"></app-single-kpi>
+        <app-percentages name="Reistijd vertragingen in tabel" [data]="percentagesData"></app-percentages>
+    </div>
+    <div class="containerRight">
+        <app-emission-kpi name="Totale actuele uitstoot" [optionsTotal]="emisionOptionsTotal"></app-emission-kpi>
+        <app-emission-kpi name="Totale uitstoot prognose (10 min.)" [optionsEstimated]="emisionOptionsEstimated">
+        </app-emission-kpi>
+        <app-emission-kpi id="Emdif" [difference]="emissionDifference">Het verschil is </app-emission-kpi>
+    </div>
 </div>
 
-    <!-- Hier worden een div aangemaakt   die ook in de TS bestanden wordt gevuld--> 
+
+
+<!-- Hier worden een div aangemaakt   die ook in de TS bestanden wordt gevuld-->

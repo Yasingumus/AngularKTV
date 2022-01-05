@@ -1,47 +1,39 @@
 <!-- hier staat een standaart HTML table die gevuld wordt vanuit onze Typescript -->
-<div class="container">
-  <h2 id="titeltabel">Percentage vertraging op netwerk</h2>
+<h1>{{name}}</h1>
   <table class="content-table">
     <tr>
-      <th>Traject</th>
-      <th>Vertraging in minuten</th>
+      <th>Vertraging in minuten en secondes</th>
       <th>Vertraging in percentage</th>
     </tr>
-
+    
     <tr>
-      <td>{{data[0]?.route}}</td>
       <td>{{data[0]?.difference}}</td>
       <td>{{data[0]?.percentage}}%</td>
     </tr>
-
+    
     <tr>
-      <td>{{data[1]?.route}}</td>
       <td>{{data[1]?.difference}}</td>
       <td>{{data[1]?.percentage}}%</td>
     </tr>
-
+    
     <tr>
-      <td>{{data[2]?.route}}</td>
       <td>{{data[2]?.difference}}</td>
       <td>{{data[2]?.percentage}}%</td>
     </tr>
+    
     <tr>
-      <td>{{data[3]?.route}}</td>
       <td>{{data[3]?.difference}}</td>
       <td>{{data[3]?.percentage}}%</td>
     </tr>
-
+    
     <tr>
-      <td>{{data[4]?.route}}</td>
       <td>{{data[4]?.difference}}</td>
       <td>{{data[4]?.percentage}}%</td>
     </tr>
-
+    
     <tr>
-      <td>{{data[5]?.route}}</td>
       <td>{{data[5]?.difference}}</td>
       <td>{{data[5]?.percentage}}%</td>
     </tr>
 
   </table>
-</div>
