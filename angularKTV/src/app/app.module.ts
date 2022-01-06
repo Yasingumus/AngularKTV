@@ -13,6 +13,7 @@ import { SliderOverviewComponent } from './components/dashboard/slider-overview/
 import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
+import { EmissionDifferenceComponent } from './components/dashboard/emission-difference/emission-difference.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { NgxSliderModule } from '@angular-slider/ngx-slider';
     EmissionKpiComponent,
     PercentagesComponent,
     SliderOverviewComponent,
+    EmissionDifferenceComponent,
   ],
   imports: [
     BrowserModule,

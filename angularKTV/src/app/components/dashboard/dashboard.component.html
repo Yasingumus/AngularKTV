@@ -6,13 +6,10 @@
         <app-percentages name="Reistijd vertragingen in tabel" [data]="percentagesData"></app-percentages>
     </div>
     <div class="containerRight">
-        <app-emission-kpi name="Totale actuele uitstoot" [optionsTotal]="emisionOptionsTotal"></app-emission-kpi>
-        <app-emission-kpi name="Totale uitstoot prognose (10 min.)" [optionsEstimated]="emisionOptionsEstimated">
-        </app-emission-kpi>
-        <app-emission-kpi id="Emdif" [difference]="emissionDifference">Het verschil is </app-emission-kpi>
+        <app-emission-kpi name="Totale actuele uitstoot" [optionsTotal]="emisionOptionsTotal" style="flex-basis: 45%;"></app-emission-kpi>
+        <app-emission-kpi name="Totale uitstoot prognose (10 min.)" [optionsEstimated]="emisionOptionsEstimated"></app-emission-kpi>
+        <app-emission-difference [difference]="emissionDifference"></app-emission-difference>
     </div>
 </div>
 
 
-
-<!-- Hier worden een div aangemaakt   die ook in de TS bestanden wordt gevuld-->
